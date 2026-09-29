@@ -28,10 +28,22 @@
     "map into <work_dir>/manifest.json, and prints the same map in its stdout header. Nothing is",
     "capped silently. When a funnel line says 'screened N', say what the strata dropped to get",
     "there - a lane that drops hundreds of eligible markets every cycle is evidence for resizing",
-    "it, or a proposal about the pool ceiling."
+    "it, or a proposal about the pool ceiling.",
+    "",
+    "2026-09-29 resize 300 -> 100 (15 -> 5 batches). Evidence: joined journal/screener.jsonl to",
+    "journal/screener-outcomes.jsonl, last observation per market, 10,961 resolved markets: the",
+    "screener probability scores brier_delta +0.0022 [+0.0015, +0.0030] against the mid, the",
+    "optimal blend weight on the market is 1.00, and where it diverges >= 0.10 from the mid it",
+    "is wrong by +0.108 - the escalation list ranks the screener's largest errors first. The",
+    "ranking role was NOT separately tested (journal/screener-rank-decision.md kept divergence),",
+    "so this is a 3x cut, not a shutdown: closing_48h and top_liquidity keep the lanes where a",
+    "stale price matters, top_volume_24h goes to 0 (attention is what the mid already prices),",
+    "random_tail stays at its floor. Re-grade at the next deep retro on the funnel's escalated",
+    "-> researched -> settled chain; restore lanes only if researched-from-escalated rows beat",
+    "researched-from-elsewhere rows on brier_delta at n >= 30."
   ],
-  "closing_48h": 80,
-  "top_liquidity": 120,
-  "top_volume_24h": 60,
-  "random_tail": 40
+  "closing_48h": 40,
+  "top_liquidity": 40,
+  "top_volume_24h": 0,
+  "random_tail": 20
 }

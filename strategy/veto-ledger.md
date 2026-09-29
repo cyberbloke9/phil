@@ -2223,3 +2223,18 @@ Ruling: no boundary change. Both vetoes kept real losses off the ledger;
 the outside-view pair is the textbook undated-count case the
 cumulative-count anchor rule exists for (the est rested on an inferred,
 not observed, pace).
+
+**2026-09-29 17:4xZ update (FULL cycle, operator machine; Dota2 LGD -1.5 vs
+Xtreme settled Xtreme: 1 `outside-view-veto` row, see RETRO-20260929-1745.)**
+
+| Row | est vs mkt | Side | Realizable edge | Result | CF P&L |
+|---|---|---|---|---|---|
+| LGD -1.5 vs Xtreme (`c0ad4f0ec92d`) | 0.25 / 0.355 | No | +0.080 (0.75 vs No ask 0.67) | No (Xtreme covered) | +2.46 |
+
+Outside-view-veto net this row: **+$2.46** (1W/0L). Veto cost money this
+time. The veto tripped on |est - mid| 0.105 (the note's ~0.13 was vs the Yes
+ask, which a No bet can't realize). Running totals NOT
+recomputed: `strategy/tools/*.py` needed approval this session, and rows may
+have settled since the 09-26 block without a totals update. The totals are
+owed to the next session that can run the tools. No boundary change (n=1,
+constitution rule 2).

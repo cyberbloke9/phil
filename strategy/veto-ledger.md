@@ -2252,3 +2252,19 @@ replaces the totals owed since the 09-29 17:4xZ block): outside-view-veto
 +$68.98; wide-spread-veto 28 rows / 25 trades / 14W-11L / -$29.35 / dBrier
 -0.0299 / held-out -$25.00. Ruling: no boundary change. The veto blocked no
 realizable trade here; the book spread was the whole story.
+
+**2026-09-30 15:5xZ update (FULL cycle, operator machine; Core PCE Aug
+printed 3.0 YoY / 0.2 MoM, Parcl Sep 30 set settled: 3 `outside-view-veto`
+rows, see RETRO-20260930-1550.)**
+
+| Row | est vs mkt | Side | Realizable edge | Result | CF P&L |
+|---|---|---|---|---|---|
+| Core PCE YoY 3.2 (`9f05a589aba3`) | 0.49 / 0.31 (book 0.26/0.36) | Yes | +0.130 (0.49 vs Yes ask 0.36) | No (3.0) | -5.00 |
+| Core PCE MoM 0.2 (`275271e3d70b`) | 0.19 / 0.275 | No | +0.080 (0.81 vs No ask 0.73) | Yes | -5.00 |
+| Parcl SF <1.176M (`7f5d8917f569`) | 0.90 / 0.78 | Yes | +0.110 (0.90 vs Yes ask 0.79) | Yes | +1.33 |
+
+Outside-view-veto net these rows: **-$8.67** (1W/2L), so the veto saved money
+this time. Mechanical totals (`core/counterfactual.py ledger`, 09-30 15:5xZ):
+outside-view-veto 183 rows / 175 trades / 74W-101L / +$71.20 / dBrier +0.0330
+/ held-out +$65.31; wide-spread-veto 31 rows / 27 trades / 15W-12L / -$32.94
+/ dBrier -0.0026 / held-out -$30.08. No boundary change.

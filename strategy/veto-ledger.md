@@ -2238,3 +2238,17 @@ recomputed: `strategy/tools/*.py` needed approval this session, and rows may
 have settled since the 09-26 block without a totals update. The totals are
 owed to the next session that can run the tools. No boundary change (n=1,
 constitution rule 2).
+
+**2026-09-30 07:5xZ update (FULL cycle, operator machine; 10y 5.25 Sep touch
+settled Yes: 1 `wide-spread-veto` row, see RETRO-20260930-0750.)**
+
+| Row | est vs mkt | Side | Realizable edge | Result | CF P&L |
+|---|---|---|---|---|---|
+| 10y hit 5.25 in Sep (`a41e6e996b85`) | 0.46 / 0.65 (book 0.44/0.86) | No | -0.020 (own No 0.54 vs No ask 0.56) | Yes | -1.00 (mechanical tool fills it anyway) |
+
+Mechanical totals (`core/counterfactual.py ledger`, 09-30 07:5xZ, $5 flat,
+replaces the totals owed since the 09-29 17:4xZ block): outside-view-veto
+180 rows / 172 trades / 73W-99L / +$79.87 / dBrier +0.0322 / held-out
++$68.98; wide-spread-veto 28 rows / 25 trades / 14W-11L / -$29.35 / dBrier
+-0.0299 / held-out -$25.00. Ruling: no boundary change. The veto blocked no
+realizable trade here; the book spread was the whole story.
